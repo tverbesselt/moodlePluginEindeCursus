@@ -18,7 +18,7 @@ $PAGE->set_context($context);
 $PAGE->set_heading($course->fullname);
 $PAGE->set_title(get_string('pluginname', 'block_cursusadministratie'));
 
-$mform = new \block_cursusadministratie\form\edit_form(null, ['courseid' => $courseid]);
+$mform = new \block_cursusadministratie\form\edit_form(new moodle_url('/blocks/cursusadministratie/view.php', ['courseid' => $courseid]), ['courseid' => $courseid]);
 
 // Load existing data
 $data = new stdClass();

@@ -27,6 +27,10 @@ class edit_form extends \moodleform {
             $mform->addElement('checkbox', $key . '_paper', get_string('paper_submission', 'block_cursusadministratie'));
         }
 
+        $mform->addElement('hidden', 'courseid');
+        $mform->setType('courseid', PARAM_INT);
+        $mform->setDefault('courseid', $this->_customdata['courseid']);
+
         $this->add_action_buttons();
     }
 }
